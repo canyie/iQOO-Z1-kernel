@@ -1,0 +1,118 @@
+#
+# ViVo SoC codec configuration
+#
+
+# menu "vivo HiFi Soc Audio Support"
+
+config VIVO_SOC_CODEC
+    bool "vivo soc codec"
+    help
+        this is for vivo soc codec, including dac hifi, speaker smart pa, ktv and so on.
+
+config VIVO_CODEC_PD1611F
+    bool "vivo codec for pd1611f"
+    help
+        this is for vivo codec of pd1611f,including dac hifi, speaker smart pa,ktv ans so on
+
+config VIVO_CODEC_PD1612
+    bool "vivo codec for pd1612"
+    help
+        this is for vivo codec of pd1612,including dac hifi, speaker smart pa,ktv ans so on
+
+config VIVO_CODEC_PD1612F
+    bool "vivo codec for pd1612f"
+    help
+        this is for vivo codec of pd1612f,including dac hifi, speaker smart pa,ktv ans so on
+
+config VIVO_CODEC_PD1524BA_6_0
+    bool "vivo codec for pd1524ba 6.0"
+    help
+        this is for vivo codec of pd1524ba 6.0,including dac hifi, speaker smart pa,ktv ans so on
+
+config AK4375
+    bool "DAC AK4375"
+    help
+        This is for AK4375 DAC, for audio hifi performance
+
+config AK4376
+    bool "DAC AK4376"
+    help
+        This is for AK4376 DAC, for audio hifi performance
+
+config SPK_TFA98XX
+    bool "Smart pa for loundspeaker"
+    help 
+        This is for loundspeaker smart pa supported
+
+config NXP_TFA98XX
+    tristate "NXP Smart PA TFA98xx"
+    help
+        This is for nxp smart pa for speaker performance
+
+config SND_CODEC_TFA9894
+    bool "Enable TFA9894"
+    help
+        to add support of audio codec tfa9894
+
+config SND_SOC_TFA98XX
+    bool "Enable TFA98xx"
+    help
+        to add support of audio codec tfa98xx
+
+config HIFI_CS4398
+    bool "CS4398 DAC Enable"
+    help
+        This item configs external dac cs4398 supported.
+
+config HIFI_ES9028
+    bool "ES9028 DAC Enable"
+    help
+        This item configs external dac es9028 supported.
+
+config KTV_YAMAHA
+    bool "Yamaha ymu831 Enable"
+    help
+        This item configs external dac by ktv supported.
+ 
+config VIVO_REGDUMP
+    bool "vivo Audio IC Register dump Enable"
+
+config VIVO_CODEC_FOR_MTK
+    bool "vivo codec driver for mtk platform"
+    help
+        enable it if it's mtk platform, disable it if it is not
+
+config SND_TFA9891
+    bool "Enable TFA9891"
+    help
+        To add support for SoC audio on TFA9891.
+
+config SND_SOC_CODEC_TAS2562
+    bool "Enable TAS2562"
+    help
+        To add support for SoC audio on TAS2562.
+
+config TAS2562_REGMAP
+    bool "Use of RegMap API"
+    help
+      Enable support for TAS2562 regmap driver.
+      This includes i2c i2c driver structure,
+      IRQ processing, registers read and write
+      by i2c operations.
+
+config TAS2562_CODEC
+    bool "Codec Driver support"
+    help
+      Enable support for TAS2562 codec driver.
+      This includes codec driver interfaces
+      and functions.
+
+config SND_SOC_CODEC_AW88263
+    bool "Enable AW88263"
+    help
+        To add support for SoC audio on AW88263.
+
+#source "sound/soc/vivo/tas256x/Kconfig"
+source "sound/soc/vivo/typec/Kconfig"
+
+# endmenu

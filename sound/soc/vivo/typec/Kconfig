@@ -1,0 +1,7 @@
+config MTK_TYPEC_ACCDET
+	bool "MediaTek TYPEC ACCDET driver"
+	help
+	  TYPEC ACCDET driver is for headset detect and support for MediaTek SOC
+	  If you want to use MediaTek TYPEC ACCDET driver,
+	  say Y.
+	  If unsure, say N.

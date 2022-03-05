@@ -1,0 +1,11 @@
+obj-y += vivo-codec-common.o
+obj-y += vivo_soc_codec.o
+obj-y += aw87319.o
+obj-y += aw87xxx.o aw87xxx_mnt.o
+obj-y += aw87339_audio.o
+#obj-y += ak4376.o
+#obj-y += tas256x/
+obj-y += tfa9874/
+obj-y += typec/
+obj-y += aw88263/
+obj-y += tas2562/

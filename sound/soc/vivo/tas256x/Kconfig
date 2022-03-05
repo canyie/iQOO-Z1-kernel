@@ -1,0 +1,46 @@
+
+menuconfig SND_SOC_TAS256X
+	tristate "Texas Instruments TAS256X SmartAmp(R)"
+
+if SND_SOC_TAS256X
+config TAS256X_REGMAP
+    bool "Use of RegMap API"
+    help
+      Enable support for TAS256X regmap driver.
+      This includes i2c i2c driver structure,
+      IRQ processing, registers read and write
+      by i2c operations.
+
+config TAS256X_CODEC
+    bool "Codec Driver support"
+    help
+      Enable support for TAS256X codec driver.
+      This includes codec driver interfaces
+      and functions.
+
+config PLATFORM_EXYNOS
+    bool "Exynos platform support"
+    help
+      Enable support for Exynos platform.
+config TAS25XX_ALGO
+    bool "TAS256X Calibration Support"
+    depends on SND_SOC_TAS256X
+    help 
+      Enable support for TAS25XX Calibration driver.
+      This includes TAS256X Calibration driver interfaces
+      and functions.
+config TISA_DEBUGFS_INTF
+    bool "Tiny ALSA Debug"
+    help
+    Enable for Tas256xx chip debug
+config TAS256x_FOR_MTK
+    bool "TAS256x FOR MTK"
+    help
+    Enable for mtk Tas256xx chip porting
+
+#config TAS2558_CODEC
+
+#config TAS256X_MISC
+#    bool "Misc Driver support"
+
+endif # SND_SOC_TAS256X
